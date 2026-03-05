@@ -1,1 +1,18 @@
-
+--Produkt, Lieferant, Kategorie--
+--Das Problem--
+Wir müssen Produkte, Lieferanten und Kategorien kennen, weil wir wissen müssen, welche Produkte wichtiger sind und ob es dort Muster gibt, die wir nutzen können, um Vorteile zu haben. Zum Beispiel: Mehr Produkte von einem Lieferanten kaufen, um bessere Angebote oder Rabatte zu erhalten, oder wissen, ob es eine Kategorie gibt, die man häufiger als normal kaufen könnte.
+Diese Analyse ist ein vorbereitender Schritt, um in Zukunft bessere Informationen zu erhalten. Wir können mit der Verkaufsdatenbank beobachten, ob es weitere Muster gibt, die zeigen, wann die Nachfrage einer Kategorie in bestimmten Monaten steigt.
+--Anwort--
+Es werden Grundlagen der SQL-Programmierung genutzt, um die Namen von allen Elementen mit Abfragen zu sehen: SELECT, FROM, JOIN ON. Die Schwierigkeit besteht darin, dass man die Schlüssel (Keys) in den Tabellen nutzen muss, um sie richtig zu verknüpfen und die richtigen Namen in der Ergebnistabelle anzuzeigen.
+Problem
+We need to know the Product, Supplier, and Category because we need to see which products are more relevant and know if there are patterns that we can use to gain benefits, such as: buying more products from one supplier to get discounts, or knowing if there is a category that is bought more often than normal.
+This analysis is a preliminary step to get better information in the future. We can use the sales database to see if there are more patterns, such as when a category's sales increase in certain months.
+Answer
+Use basic SQL programming to see the names of everything with the following queries: SELECT, FROM, JOIN ON. The difficulty is that you must use the keys in the tables to connect them correctly and show the correct names in the summary table.
+ANSWER SQL
+select pro.product_name, sup.company_name,cat.category_name
+FROM products AS pro
+JOIN suppliers AS sup
+ON pro.supplier_id=sup.supplier_id
+JOIN categories AS cat
+ON pro.category_id=cat.category_id
